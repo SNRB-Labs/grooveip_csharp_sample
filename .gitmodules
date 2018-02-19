@@ -1,0 +1,3 @@
+[submodule "Com.Grooveip.Api/libs/RestClient"]
+	path = Com.Grooveip.Api/libs/RestClient
+	url = https://github.com/palburtus/restclient.net.git
