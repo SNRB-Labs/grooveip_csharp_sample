@@ -78,5 +78,15 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Com.Grooveip.Sdk\Com.Grooveip.Sdk.csproj">
+      <Project>{7FF24DAC-67C6-42FA-8482-3CD9019E3FE5}</Project>
+      <Name>Com.Grooveip.Sdk</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\libs\RestClient\Aaks.Restclient\Aaks.Restclient.csproj">
+      <Project>{9A3A0CD0-4198-42D9-9072-FCFEDE6703F2}</Project>
+      <Name>Aaks.Restclient</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

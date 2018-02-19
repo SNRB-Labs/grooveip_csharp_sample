@@ -1,4 +1,7 @@
-﻿using System;
+﻿using Aaks.Restclient;
+using Aaks.RestclientTests.Model;
+using Com.Grooveip.Sdk.Api;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -20,16 +23,48 @@ namespace Com.Grooveip.SampleFormsApp
         }
 
         private void FormNumbersInventory_Load(object sender, EventArgs e)
-        {
-            Cursor.Current = Cursors.WaitCursor;
-            InitializeViews();
-            Cursor.Current = Cursors.AppStarting;
+        {   
+            InitializeViews();   
         }
 
-        private void InitializeViews()
+        private async void InitializeViews()
         {
-            Thread.Sleep(10000);
-            labelNoNumbers.Visible = true;
+            progressBarLoading.Visible = true;
+            progressBarLoading.Maximum = 100;
+            progressBarLoading.Step = 1;
+
+            var progress = new Progress<int>(v =>
+            {
+                progressBarLoading.Value = v;
+            });
+
+            // Run operation in another thread
+            //await
+
+            string url = ApiClient.BuildInventoryUrl(1, 100);
+
+            HttpRestClient client = new HttpRestClient();
+
+            HttpResponse<List<object>> response = await client.GetAsync<List<object>>(url);
+
+            if(response.StatusCode == System.Net.HttpStatusCode.OK)
+            {
+                if (response.Body != null & response.Body.Count > 0)
+                {
+                    listViewNumbersInventory.Visible = true;
+                }
+                else
+                {
+                    labelNoNumbers.Visible = true;
+                }
+            }
+            else
+            {
+                labelNoNumbers.Visible = true;
+                labelNoNumbers.Text = response.ErrorMessage;
+            }
+
+            
         }
 
         private void buttonSearchNumbers_Click(object sender, EventArgs e)
