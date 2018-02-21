@@ -33,6 +33,7 @@
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -42,6 +43,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\ApiClient.cs" />
+    <Compile Include="Model\LoginAuthRequest.cs" />
+    <Compile Include="Model\LoginAuthResponse.cs" />
+    <Compile Include="Model\LoginAuthResponseCredentials.cs" />
+    <Compile Include="Model\LoginAuthResponseSip.cs" />
     <Compile Include="Model\NumberReserveRequest.cs" />
     <Compile Include="Model\NumberReserveResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
