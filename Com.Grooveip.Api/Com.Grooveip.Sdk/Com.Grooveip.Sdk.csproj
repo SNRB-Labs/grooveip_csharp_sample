@@ -49,6 +49,7 @@
     <Compile Include="Model\LoginAuthResponseSip.cs" />
     <Compile Include="Model\NumberReserveRequest.cs" />
     <Compile Include="Model\NumberReserveResponse.cs" />
+    <Compile Include="Model\NumbersInventoryResponse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\HashGenerator.cs" />
   </ItemGroup>
