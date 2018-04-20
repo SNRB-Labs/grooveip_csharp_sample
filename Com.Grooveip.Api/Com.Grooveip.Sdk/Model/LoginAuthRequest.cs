@@ -10,5 +10,7 @@ namespace Com.Grooveip.Sdk.Model
     {
         public string Email { get; set; }
         public string Password { get; set; }
+
+        public string AuthHash { get; set; }
     }
 }
