@@ -43,6 +43,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Api\ApiClient.cs" />
+    <Compile Include="Model\ErrorResponse.cs" />
     <Compile Include="Model\LoginAuthRequest.cs" />
     <Compile Include="Model\LoginAuthResponse.cs" />
     <Compile Include="Model\LoginAuthResponseCredentials.cs" />
