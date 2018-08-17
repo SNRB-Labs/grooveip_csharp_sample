@@ -42,6 +42,7 @@
             this.buttonSearchNumbers.TabIndex = 0;
             this.buttonSearchNumbers.Text = "Search Numbers";
             this.buttonSearchNumbers.UseVisualStyleBackColor = true;
+            this.buttonSearchNumbers.UseWaitCursor = true;
             this.buttonSearchNumbers.Click += new System.EventHandler(this.buttonSearchNumbers_Click);
             // 
             // labelNoNumbers
@@ -54,6 +55,7 @@
             this.labelNoNumbers.TabIndex = 1;
             this.labelNoNumbers.Text = "You have no numbers";
             this.labelNoNumbers.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.labelNoNumbers.UseWaitCursor = true;
             this.labelNoNumbers.Visible = false;
             // 
             // listViewNumbersInventory
@@ -64,6 +66,7 @@
             this.listViewNumbersInventory.Size = new System.Drawing.Size(297, 403);
             this.listViewNumbersInventory.TabIndex = 3;
             this.listViewNumbersInventory.UseCompatibleStateImageBehavior = false;
+            this.listViewNumbersInventory.UseWaitCursor = true;
             this.listViewNumbersInventory.View = System.Windows.Forms.View.List;
             this.listViewNumbersInventory.Visible = false;
             // 
@@ -77,6 +80,7 @@
             this.Controls.Add(this.buttonSearchNumbers);
             this.Name = "FormNumbersInventory";
             this.Text = "My Numbers";
+            this.UseWaitCursor = true;
             this.Load += new System.EventHandler(this.FormNumbersInventory_Load);
             this.ResumeLayout(false);
             this.PerformLayout();

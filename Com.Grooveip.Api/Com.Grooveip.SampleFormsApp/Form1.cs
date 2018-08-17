@@ -80,7 +80,19 @@ namespace Com.Grooveip.SampleFormsApp
 
         private void buttonSearchNumbers_Click(object sender, EventArgs e)
         {
+            SearchForm searchForm = new SearchForm();
+            DialogResult dr = searchForm.ShowDialog(this);
 
+            if(dr == DialogResult.OK)
+            {
+                ListViewItem li = new ListViewItem();
+                li.Text = searchForm.SelectedNumber;
+                listViewNumbersInventory.Items.Add(li);
+            }
+            else
+            {
+                searchForm.Close();
+            }
         }
         
     }
