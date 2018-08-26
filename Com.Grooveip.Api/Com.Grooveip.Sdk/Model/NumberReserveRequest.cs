@@ -13,5 +13,6 @@ namespace Com.Grooveip.Sdk.Model
         public string AreaCode { get; set; }
         public string RequestId { get; set; }
         public string Hash { get; set; }
+        public string Token { get; set; }
     }
 }
